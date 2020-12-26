@@ -15,6 +15,16 @@ public class Address {
         this.zipCode = zipCode;
     }
 
+    @Override
+    public String toString() {
+        return "Address: "
+                + this.getHouseNumber() + " "
+                + this.getStreetAddress() + ", "
+                + this.getCity() + ", "
+                + this.getProvince() + ", "
+                + this.getZipCode();
+    }
+
     public String getHouseNumber() {
         return Integer.toString(houseNumber);
     }
@@ -34,4 +44,6 @@ public class Address {
     public String getZipCode() {
         return zipCode;
     }
+
+
 }

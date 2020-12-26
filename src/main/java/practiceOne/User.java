@@ -1,32 +1,32 @@
-/* 以下代码有什么坏味道？ */
-
 package practiceOne;
 
+/**
+ * @author e_jjk
+ */
 public class User {
 
-    String ad; // 地址
-    String sx; // 性别
+    String address;
+    String sex;
+    String[] carNumbers;
 
-    String[] num; //车牌号
-
-    public User(String sx, String[] num) {
-        this.sx = sx;
-        this.num = num;
+    public User(String sex, String[] carNumbers) {
+        this.sex = sex;
+        this.carNumbers = carNumbers;
     }
 
-    public void setAd(String param1) {
-        this.ad = param1;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public String showCarNumber() {
+    public String toCarNumbersString() {
         String result = "";
-        for (String carNumber : num) {
+        for (String carNumber : carNumbers) {
             result += "car number: " + carNumber + "\n";
         }
         return result;
     }
 
     public String introduce() {
-        return "address: " + ad + ". sex: " + sx;
+        return "address: " + address + ". sex: " + sex;
     }
 }

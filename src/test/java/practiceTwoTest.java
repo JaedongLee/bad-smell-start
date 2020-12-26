@@ -13,7 +13,7 @@ public class practiceTwoTest {
         airwayBill.setToAddress(address);
         airwayBill.setToCustomerName(customerName);
 
-        var expect = "Customer: " +
+        String expect = "Customer: " +
                 "sir: Zhu Yuanzhang" +
                 System.lineSeparator() +
                 "Address: " +
@@ -22,7 +22,7 @@ public class practiceTwoTest {
                 "BeiJin" + ", " +
                 "" + ", " +
                 "10000";
-        String targetCustomerInfo = airwayBill.to();
+        String targetCustomerInfo = airwayBill.showCustomerInfo(true);
         assertEquals(expect, targetCustomerInfo);
     }
 
@@ -34,7 +34,7 @@ public class practiceTwoTest {
         airwayBill.setFromAddress(address);
         airwayBill.setFromCustomerName(customerName);
 
-        var expect = "Customer: " +
+        String expect = "Customer: " +
                 "sir: Zhu Yuanzhang" +
                 System.lineSeparator() +
                 "Address: " +
@@ -43,7 +43,7 @@ public class practiceTwoTest {
                 "BeiJin" + ", " +
                 "" + ", " +
                 "10000";
-        String sourceCustomerInfo = airwayBill.from();
+        String sourceCustomerInfo = airwayBill.showCustomerInfo(false);
         assertEquals(expect, sourceCustomerInfo);
     }
 }

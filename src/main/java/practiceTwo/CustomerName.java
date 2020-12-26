@@ -25,4 +25,8 @@ public class CustomerName {
         return title;
     }
 
+    @Override
+    public String toString() {
+        return "Customer: " + this.getTitle() + ": " + this.getFirstName() + " " + this.getLastName();
+    }
 }

@@ -8,28 +8,16 @@ public class AirwayBill { // 快递单
     private Address toAddress;
     private Address fromAddress;
 
-    public String to() {
-        return "Customer: " +
-                toCustomerName.getTitle() + ": " + toCustomerName.getFirstName() + " " + toCustomerName.getLastName() +
-                System.lineSeparator() +
-                "Address: " +
-                toAddress.getHouseNumber() + " " +
-                toAddress.getStreetAddress() + ", " +
-                toAddress.getCity() + ", " +
-                toAddress.getProvince() + ", " +
-                toAddress.getZipCode();
-    }
-
-    public String from() {
-        return "Customer: " +
-                fromCustomerName.getTitle() + ": " + fromCustomerName.getFirstName() + " " + fromCustomerName.getLastName() +
-                System.lineSeparator() +
-                "Address: " +
-                fromAddress.getHouseNumber() + " " +
-                fromAddress.getStreetAddress() + ", " +
-                fromAddress.getCity() + ", " +
-                fromAddress.getProvince() + ", " +
-                fromAddress.getZipCode();
+    public String showCustomerInfo(boolean toOrFrom) {
+        if (toOrFrom) {
+            return toCustomerName.toString() +
+                    System.lineSeparator() +
+                    toAddress.toString();
+        } else {
+            return fromCustomerName.toString() +
+                    System.lineSeparator() +
+                    fromAddress.toString();
+        }
     }
 
     public void setToAddress(Address address) {
